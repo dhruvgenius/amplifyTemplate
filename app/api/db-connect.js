@@ -6,10 +6,10 @@ export const handler = async (event) => {
     try {
         // Connect to the MySQL database using environment variables
         connection = await mysql.createConnection({
-            host: process.env.t3db-instance.cmypylkqlfup.us-east-1.rds.amazonaws.com,
-            user: process.env.t3admin,
-            password: process.env.JlziWBbT4LmgEEbJsCwW,
-            database: process.env.GoodDriverIncentiveT3,
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_NAME,
             port: process.env.DB_PORT || 3306,
         });
 
